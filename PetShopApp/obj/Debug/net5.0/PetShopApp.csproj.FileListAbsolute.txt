@@ -38,3 +38,5 @@ D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\ref\PetShopApp.d
 D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\PetShopApp.pdb
 D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\PetShopApp.genruntimeconfig.cache
 D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\PetShopApp.csproj.CopyComplete
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\Home\Images.cshtml.g.cs
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\HelloWorld\Index.cshtml.g.cs
