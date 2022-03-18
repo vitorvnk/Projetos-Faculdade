@@ -7,8 +7,11 @@ namespace PetShopApp.Controllers{
             return View();
         }
 
-        public string Welcome(string name, int id = 1){
-            return HtmlEncoder.Default.Encode($"Nome: {name} ID:{id}");
+        public IActionResult Welcome(string name, int vezes = 1){
+            ViewData["Mensagem"] = name;
+            ViewData["Vezes"] = vezes;
+
+            return View();
         }
     }
 }
