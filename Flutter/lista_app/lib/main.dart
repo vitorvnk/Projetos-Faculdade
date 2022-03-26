@@ -21,9 +21,10 @@ class ListaScreen extends StatefulWidget {
     return new ListaScreenState();
   }
 }
+//List.filled
 
 class ListaScreenState extends State<ListaScreen> {
-  List<Tarefa> tarefas = new List<Tarefa>();
+  List<Tarefa> tarefas = <Tarefa>[];
   TextEditingController controller = new TextEditingController();
 
   void adicionaTarefa(String nome) { 
