@@ -171,3 +171,8 @@ D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\ref\PetShopApp.d
 D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\PetShopApp.pdb
 D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\PetShopApp.genruntimeconfig.cache
 D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\PetShopApp.csproj.CopyComplete
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\Produto\Create.cshtml.g.cs
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\Produto\Delete.cshtml.g.cs
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\Produto\Details.cshtml.g.cs
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\Produto\Edit.cshtml.g.cs
+D:\Programação\Projetos Faculdade\PetShopApp\obj\Debug\net5.0\Razor\Views\Produto\Index.cshtml.g.cs
