@@ -19,7 +19,7 @@ namespace PetShopApp.Controllers
         }
 
         // GET: Produto
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
             return View(await _context.Produto.ToListAsync());
         }
