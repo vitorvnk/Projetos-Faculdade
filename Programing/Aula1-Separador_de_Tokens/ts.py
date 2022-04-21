@@ -4,8 +4,6 @@ teste = {
         'ID' : 'TS',
         'NUM' : 'TS',
         '(' :  'TS',
-        'element' : 'banana',
-        'dwada' : 'awawfaa'
     },
     'T' : {
         'ID' : 'FG',
