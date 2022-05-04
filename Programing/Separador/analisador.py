@@ -84,8 +84,12 @@ while True:
             pilha.remove('$')
         i = len(pilha)-1
     except:
-        print('Erro em tempo de execução.')
-        break
+        if (len(cadeia) == 0):
+            print('Cadeia vazia, senhores. Finalizado com sucesso!')
+            break
+        else :
+            print('Erro em tempo de execução.')
+            break
 
     if (len(cadeia) == 0):
         print('Cadeia vazia, senhores. Finalizado com sucesso!')
