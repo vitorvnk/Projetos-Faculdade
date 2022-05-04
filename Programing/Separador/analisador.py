@@ -59,6 +59,7 @@ for linha in linhas:
         if concatenation in tokens:
             comparador.clear()
             cadeia.append(concatenation)
+
 i = 0
 while True:
     #print(cadeia[0], '-|--|-',   pilha[len(pilha)-1], '->-->-', tabela.get(pilha[len(pilha)-1]))
@@ -82,20 +83,22 @@ while True:
         elif ('$' in pilha):
             pilha.remove('$')
         i = len(pilha)-1
+    except:
+        print('Erro em tempo de execução.')
+        break
 
-
-    if (pilha[len(pilha)-1] == cadeia[0]):
+    if (len(cadeia) == 0):
+        print('Cadeia vazia, senhores. Finalizado com sucesso!')
+        break
+    elif (pilha[len(pilha)-1] == cadeia[0]):
         print(f'REMOVEU - CADEIA: {cadeia[0]}\n')
         pilha.pop(len(pilha)-1)
         cadeia.pop(0)
     elif ('$' in pilha):
         pilha.remove('$')
+
     i = len(pilha)-1
 
-    if (len(cadeia) == 0):
-        print('Cadeia vazia, senhores. Finalizado com sucesso!')
-        break
-    
     print('\n')
     print(f'PILHA: {pilha}')
     print(f'CADEIA: {cadeia}')
