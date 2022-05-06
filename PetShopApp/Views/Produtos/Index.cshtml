@@ -9,17 +9,17 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table table-striped">
+<table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DescricaoProduto)
+                @Html.DisplayNameFor(model => model.Descricao)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.QtdProduto)
+                @Html.DisplayNameFor(model => model.QuantidadeEstoque)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.PrecoCompra)
@@ -37,10 +37,10 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DescricaoProduto)
+                @Html.DisplayFor(modelItem => item.Descricao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.QtdProduto)
+                @Html.DisplayFor(modelItem => item.QuantidadeEstoque)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PrecoCompra)

@@ -80,8 +80,6 @@ while True:
             print(f'REMOVEU - CADEIA:{cadeia[0]}\n')
             pilha.pop(len(pilha)-1)
             cadeia.pop(0)
-        elif ('$' in pilha):
-            pilha.remove('$')
         i = len(pilha)-1
     except:
         if (len(cadeia) == 0):
@@ -107,7 +105,6 @@ while True:
     print(f'PILHA: {pilha}')
     print(f'CADEIA: {cadeia}')
     print('\n')
-    #print(tabela[pilha[0]+cadeia[0]][::-1])
 
 
 

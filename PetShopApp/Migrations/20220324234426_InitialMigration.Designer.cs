@@ -8,40 +8,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace PetShopApp.Migrations
 {
     [DbContext(typeof(PetShopAppContext))]
-    [Migration("20220408001336_Produtos")]
-    partial class Produtos
+    [Migration("20220324234426_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
-
-            modelBuilder.Entity("PetShopApp.Models.Produto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("DescricaoProduto")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("TEXT");
-
-                    b.Property<float>("PrecoCompra")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("PrecoVenda")
-                        .HasColumnType("REAL");
-
-                    b.Property<int>("QtdProduto")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Produto");
-                });
 
             modelBuilder.Entity("PetShopApp.Models.Proprietario", b =>
                 {

@@ -1,17 +1,21 @@
-using Microsoft.AspNetCore.Mvc; // Define que estamos utilizando o type MVC
-using System.Text.Encodings.Web; // Define que essa classe retornará uma página
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
 
-namespace PetShopApp.Controllers{
-    public class HelloWorldController : Controller{
-        public IActionResult Index(){
+namespace PetShopApp.Controllers
+{
+    public class HelloWorldController : Controller
+    {
+        public IActionResult Index()
+        {
             return View();
         }
 
-        public IActionResult Welcome(string name, int vezes = 1){
-            ViewData["Mensagem"] = name;
-            ViewData["Vezes"] = vezes;
+        public IActionResult Welcome(string name, int vezes=1)
+        {
+           ViewData["Mensagem"] = "Olá "+name;
+           ViewData["vezes"] = vezes;
 
-            return View();
+           return View();
         }
     }
 }

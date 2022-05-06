@@ -10,11 +10,12 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-<form asp-controller="Proprietario" asp-action="Index">
+<form asp-controller="Proprietarios" asp-action="Index" method="GET">
     <p>
-        Pesquisar: <input type="text" name="searchString">
-        <button type="submit">Pesquisar</button>
+        Pesquisa:<input type="text" name="searchString" />
+        <input type="submit" value="Pesquisar" />
     </p>
+
 </form>
 
 

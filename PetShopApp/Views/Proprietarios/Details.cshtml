@@ -48,6 +48,30 @@
         </dd>
     </dl>
 </div>
+
+<table class="table">
+    <thead>
+        <th scope="col"> Nome </th>
+        <th scope="col"> Data de Nascimento </th>
+        <th scope="col"> Raça </th>
+        <th></th>
+    </thead>
+    <tbody>
+        @foreach (var animal in Model.Animais) {
+            <tr>
+                <td>@Html.DisplayFor(model => animal.Nome)</td>
+                <td>@Html.DisplayFor(model => animal.DtNascimento)</td>
+                <td>@Html.DisplayFor(model => animal.Raca)</td>
+                <td>
+                    <a asp-controller="Animals" asp-action="Edit" asp-route-id="@animal.Id">Edit</a> |
+                    <a asp-controller="Animals" asp-action="Details" asp-route-id="@animal.Id">Details</a> |
+                    <a asp-controller="Animals" asp-action="Delete" asp-route-id="@animal.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

@@ -15,70 +15,74 @@ namespace PetShopApp.Models
             {
                 // verificar se há dados no banco
                 if(context.Proprietario.Any()){
-                    //return;// há dados no banco
-                } else {
+                    // há dados no banco
+                }else{
+                    context.Proprietario.AddRange(
+                        new Proprietario
+                        {
+                            Nome ="Agatha Esther da Rocha",
+                            Cpf ="081.878.098-33",
+                            Endereco ="Rua Independência, 600",
+                            Telefone ="(14) 98524-1532",
+                            Email ="agatha.esther.darocha@granvale.com.br",
+                            DtNascimento = DateTime.Parse("1983-04-01"),
+                        },
+                        new Proprietario
+                        {
+                            Nome ="Alana Bárbara da Luz",
+                            Cpf ="268.915.928-79",
+                            Endereco ="Rua Abs Yasbek, 175",
+                            Telefone ="(14) 98906-8929",
+                            Email ="alana-daluz97@unitau.com.br",
+                            DtNascimento = DateTime.Parse("1952-02-22"),
+                        },
+                        new Proprietario
+                        {
+                            Nome ="Bárbara Antônia Aparício",
+                            Cpf ="260.571.038-66",
+                            Endereco ="Rua Avestil Justo Ferreira, 622",
+                            Telefone ="(14) 98234-6651",
+                            Email ="barbara_antonia_aparicio@dep.ufscar.br",
+                            DtNascimento = DateTime.Parse("1986-01-02"),
+                        },
+                        new Proprietario
+                        {
+                            Nome ="Marcela Regina Almada",
+                            Cpf ="941.568.888-27",
+                            Endereco ="Rua Madre Elide Parzianello, 815",
+                            Telefone ="(14) 99291-1294",
+                            Email ="marcela_almada@zigotto.com.br",
+                            DtNascimento = DateTime.Parse("1984-02-22"),
+                        }
+                    );
 
-                context.Proprietario.AddRange(
-                    new Proprietario
-                    {
-                        Nome ="Agatha Esther da Rocha",
-                        Cpf ="081.878.098-33",
-                        Endereco ="Rua Independência, 600",
-                        Telefone ="(14) 98524-1532",
-                        Email ="agatha.esther.darocha@granvale.com.br",
-                        DtNascimento = DateTime.Parse("1983-04-01"),
-                    },
-                    new Proprietario
-                    {
-                        Nome ="Stefany Vitória Castro",
-                        Cpf ="506.802.278-06",
-                        Endereco ="Rua Nazaré",
-                        Telefone ="(14) 99389-5492",
-                        Email ="stefany-castro85@escolajardim.com.br",
-                        DtNascimento = DateTime.Parse("1980-02-01"),
-                    },
-                    new Proprietario
-                    {
-                        Nome ="Diego Marcos Vinicius Luan Assunção",
-                        Cpf ="333.247.388-30",
-                        Endereco ="Rua Nicola Mascaro",
-                        Telefone ="(14) 99618-1330",
-                        Email ="diego-assuncao77@emayl.com",
-                        DtNascimento = DateTime.Parse("1959-01-27"),
-                    },
-                    new Proprietario
-                    {
-                        Nome ="Roberto Marcos Vinicius da Cruz",
-                        Cpf ="198.386.998-88",
-                        Endereco ="Rua Jerusalém",
-                        Telefone ="(14) 98743-7609",
-                        Email ="roberto.marcos.dacruz@alstom.com",
-                        DtNascimento = DateTime.Parse("1980-02-03"),
-                    }
-                );
+                }
+                if(context.Produto.Any())
+                {
+                    // Há dados Não fazer nada
+                }else{
+                    context.Produto.AddRange(
+                        new Produto
+                        {
+                            Nome = "Shampoo Dog",
+                            Descricao = "Shampoo para Cachorros",
+                            QuantidadeEstoque = 20,
+                            PrecoCompra = 10,
+                            PrecoVenda = 25,
+                        },
+                        new Produto
+                        {
+                            Nome = "Shampoo Cat",
+                            Descricao = "Shampoo para Gatos",
+                            QuantidadeEstoque = 15,
+                            PrecoCompra = 12,
+                            PrecoVenda = 20,
+                        }
+                    );
+                }
+
                 
-            }
 
-            if (context.Produto.Any()){
-                // Há dados no banco
-            } else {
-                context.Produto.AddRange(
-                    new Produto{
-                        Nome = "Danone",
-                        DescricaoProduto = "Danonão",
-                        QtdProduto = 10,
-                        PrecoCompra = 5,
-                        PrecoVenda = 6
-                    },
-                    new Produto{
-                        Nome = "Coca-Cola",
-                        DescricaoProduto = "Coca de 2l",
-                        QtdProduto = 10,
-                        PrecoCompra = 5,
-                        PrecoVenda = 6
-                    }
-                );
-            }
                 context.SaveChanges();
             }
         }
