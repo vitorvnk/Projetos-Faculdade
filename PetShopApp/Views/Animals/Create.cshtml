@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" id="animal_formulario">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="DtNascimento" class="control-label"></label>
-                <input asp-for="DtNascimento" class="form-control" />
+                <input id="data_nascimento_animal" asp-for="DtNascimento" class="form-control" />
                 <span asp-validation-for="DtNascimento" class="text-danger"></span>
             </div>
             <div class="form-group">

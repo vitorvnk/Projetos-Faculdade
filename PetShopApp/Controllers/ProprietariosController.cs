@@ -1,4 +1,3 @@
-using System.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +43,6 @@ namespace PetShopApp.Controllers
             var proprietario = await _context.Proprietario
                 .Include(r => r.Animais)
                 .FirstOrDefaultAsync(m => m.Id == id);
-        
             if (proprietario == null)
             {
                 return NotFound();

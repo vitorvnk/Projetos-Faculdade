@@ -21,7 +21,16 @@ namespace PetShopApp.Models
         public string Especie {get; set;}
         public int ProprietarioID {get; set;}
 
+        [Display(Name = "Idade")]
+        public string Idade => CalculaIdade();
+
         public virtual Proprietario Proprietario {get; set;}
+
+
+        public string CalculaIdade(){
+            int idade = DateTime.Now.Year - DtNascimento.Year;
+            return $"{idade} anos de idade";
+        }
     }
 
     

@@ -1,10 +1,10 @@
 @model PetShopApp.Models.Proprietario
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 
 <div>
     <h4>Proprietario</h4>
@@ -48,30 +48,56 @@
         </dd>
     </dl>
 </div>
-
-<table class="table">
+<div>
+    <h3>Animais deste proprietário</h3>
+    <table class="table">
     <thead>
-        <th scope="col"> Nome </th>
-        <th scope="col"> Data de Nascimento </th>
-        <th scope="col"> Raça </th>
-        <th></th>
+        <tr>
+            <th>
+                <label>Nome</label>
+            </th>
+            <th>
+                 <label>Data de Nascimento</label>
+            </th>
+            <th>
+                <label>Raça</label>
+            </th>
+            <th> 
+                <label>Idade</label>
+            </th>
+            <th></th>
+        </tr>
     </thead>
     <tbody>
-        @foreach (var animal in Model.Animais) {
-            <tr>
-                <td>@Html.DisplayFor(model => animal.Nome)</td>
-                <td>@Html.DisplayFor(model => animal.DtNascimento)</td>
-                <td>@Html.DisplayFor(model => animal.Raca)</td>
-                <td>
-                    <a asp-controller="Animals" asp-action="Edit" asp-route-id="@animal.Id">Edit</a> |
-                    <a asp-controller="Animals" asp-action="Details" asp-route-id="@animal.Id">Details</a> |
-                    <a asp-controller="Animals" asp-action="Delete" asp-route-id="@animal.Id">Delete</a>
-                </td>
-            </tr>
-        }
+    @foreach (var animal in Model.Animais) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => animal.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(model => animal.DtNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(model => animal.Raca)
+            </td>
+            <td>
+                @Html.DisplayFor(model => animal.Idade)               
+            </td>
+            
+            <td>
+                <a asp-controller="Animals" asp-action="Edit" asp-route-id="@animal.Id">Edit</a> |
+                <a asp-controller="Animals" asp-action="Details" asp-route-id="@animal.Id">Details</a> |
+                <a asp-controller="Animals" asp-action="Delete" asp-route-id="@animal.Id">Delete</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>
+<div>
+    <p><a asp-controller="Animals" asp-action="Create">Novo Animal</a></p>
+</div>
 
+</div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
