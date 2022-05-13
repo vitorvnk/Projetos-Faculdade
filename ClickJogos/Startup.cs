@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using ClickJogos.Models;
 
 namespace ClickJogos
 {
@@ -28,10 +30,16 @@ namespace ClickJogos
         {
 
             services.AddControllers();
+
+            services.AddDbContext<JogoContext>(opt => 
+                opt.UseInMemoryDatabase("JogoList"));
+
+        /*
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ClickJogos", Version = "v1" });
             });
+        */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
