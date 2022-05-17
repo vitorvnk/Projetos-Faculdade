@@ -48,21 +48,21 @@ for linha in linhas:
     for caracteres in linha:
         comparador.append(caracteres.upper())
         concatenation = "".join(comparador)
-
-        if caracteres == "\n":
-            comparador.clear()
-            continue
-        if caracteres in tokens:
-            comparador.clear()
-            cadeia.append(concatenation)
-            continue
-        if concatenation in tokens:
-            comparador.clear()
-            cadeia.append(concatenation)
+    print(concatenation)
+    if caracteres == "\n":
+        comparador.clear()
+        continue
+    if caracteres in tokens:
+        comparador.clear()
+        cadeia.append(concatenation)
+        continue
+    if concatenation in tokens:
+        comparador.clear()
+        cadeia.append(concatenation)
 
 i = 0
 while True:
-    #print(cadeia[0], '-|--|-',   pilha[len(pilha)-1], '->-->-', tabela.get(pilha[len(pilha)-1]))
+    print(cadeia)
 
     try:
         if (cadeia[0] in tabela.get(pilha[len(pilha)-1])):
@@ -82,7 +82,7 @@ while True:
             cadeia.pop(0)
         i = len(pilha)-1
     except:
-        if (len(cadeia) == 0):
+        if (len(cadeia) == 0 and len(pilha) == 2):
             print('Cadeia vazia, senhores. Finalizado com sucesso!')
             break
         else :
