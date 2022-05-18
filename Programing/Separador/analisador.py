@@ -38,32 +38,31 @@ file = open("teste.txt", "r", encoding="utf-8")
 tokens = ["ID", "+", "-", "*", "/", "(", ")", "$", "NUM"]
 comparador = []
 linhas = file.readlines()
-cont = 0
 cadeia=[]
 pilha=["E"]
 status=True
 
 for linha in linhas:
-    cont += 1
     for caracteres in linha:
         comparador.append(caracteres.upper())
         concatenation = "".join(comparador)
-    print(concatenation)
-    if caracteres == "\n":
-        comparador.clear()
-        continue
-    if caracteres in tokens:
-        comparador.clear()
-        cadeia.append(concatenation)
-        continue
-    if concatenation in tokens:
-        comparador.clear()
-        cadeia.append(concatenation)
+
+        if caracteres == "\n":
+            comparador.clear()
+            continue
+        if caracteres in tokens:
+            comparador.clear()
+            cadeia.append(concatenation)
+            continue
+        if concatenation in tokens:
+            comparador.clear()
+            cadeia.append(concatenation)
+        
+        #if (concatenation not in tokens) and (cadeia.count(concatenation) == 0):
+        #   print(concatenation)
 
 i = 0
 while True:
-    print(cadeia)
-
     try:
         if (cadeia[0] in tabela.get(pilha[len(pilha)-1])):
             if i == 0:
