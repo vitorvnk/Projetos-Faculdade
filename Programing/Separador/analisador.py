@@ -57,20 +57,13 @@ for linha in linhas:
         if concatenation in tokens:
             comparador.clear()
             cadeia.append(concatenation)
-        
-        #if (concatenation not in tokens) and (cadeia.count(concatenation) == 0):
-        #   print(concatenation)
 
 i = 0
 while True:
     try:
         if (cadeia[0] in tabela.get(pilha[len(pilha)-1])):
-            if i == 0:
-                pilha.extend(tabela[pilha[len(pilha)-1]][cadeia[0]])
-                pilha.pop(i)
-            else:
-                pilha.extend(tabela[pilha[len(pilha)-1]][cadeia[0]])
-                pilha.pop(i)
+            pilha.extend(tabela[pilha[len(pilha)-1]][cadeia[0]])
+            pilha.pop(i)
         else:
             print(f'ERRO! O valor {cadeia[0]} não existe.')
             break
