@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table){
-            $table->boolean('admin');
             $table->unsignedBigInteger('employeer_id')->nullable();
             $table->foreign('employeer_id')->references('id')->on('employeers');
 
@@ -31,7 +30,6 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table){
             $table->dropForeign('users_employeer_id_foreign');
             $table->dropColumn('employeer_id');
-            $table->dropColumn('admin');
         });
     }
 };

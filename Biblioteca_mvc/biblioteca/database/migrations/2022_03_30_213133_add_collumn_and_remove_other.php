@@ -14,10 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('readers', function (Blueprint $table) {
-            $table->string('email', 200);
-        });
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('admin');
+            $table->string('email', 200)->nullable();
         });
     }
 
@@ -30,9 +27,6 @@ return new class extends Migration
     {
         Schema::table('readers', function (Blueprint $table) {
             $table->dropColumn('email');
-        });
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('admin');
         });
     }
 };
