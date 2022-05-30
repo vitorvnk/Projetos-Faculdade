@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \Database\Seeders\AuthorSeeder::run();
-        \Database\Seeders\BookSeeder::run();
         \Database\Seeders\CategorieSeeder::run();
+        \Database\Seeders\BookSeeder::run();
     }
 }

@@ -17,7 +17,7 @@ class BookSeeder extends Seeder
     {
         Book::create([
             'title' => 'Fora de Circuito',
-            'img' => '/img/uploads/16444263936203f4996bc0d.png',
+            'img' => '16444263936203f4996bc0d.png',
             'description' => 'Um Livro',
             'author_id' => '1',
             'categorie_id' => '1'
