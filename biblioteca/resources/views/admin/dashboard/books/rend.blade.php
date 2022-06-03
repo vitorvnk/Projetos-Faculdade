@@ -18,7 +18,7 @@
                     @if (!empty($reader_data))
                         <tr>
                             <td>Nome: {{$reader_data['name']}}</td>
-                            <td>RG: {{$reader_data['rg']}}</td>
+                            <td>Email: {{$reader_data['email']}}</td>
                             <td>Aniversário: {{ $reader_data['birthdate']->format('d/m/Y')  }}</td>
                         </tr>
                     @else

@@ -11,6 +11,7 @@ use Alert;
 use Mail;
 use App\Mail\SendMailBookRented;
 use App\Mail\SendMailReturnedBook;
+use App\Jobs\SendEmailJob;
 
 
 class RentedBookController extends Controller
@@ -80,7 +81,7 @@ class RentedBookController extends Controller
         ]);
 
         //Encaminha E-mail ao leitor
-        Mail::to($rented->reader->email)->send(new SendMailBookRented($rented));
+        dispatch(new SendEmailJob($rented->reader->email , new SendMailBookRented($rented)));
 
         Alert::success('Tudo certo!', 'O cadastro foi realizado com sucesso. ');
         return redirect()->route('dashboard.index');
@@ -134,7 +135,7 @@ class RentedBookController extends Controller
         $rented = $book->delete();
 
         //Encaminha um e-mail informando o leitor que o livro foi devolvido.
-        Mail::to($book->reader->email)->send(new SendMailReturnedBook($book));
+        dispatch(new SendEmailJob($book->reader->email , new SendMailReturnedBook($book)));
 
         Alert::success('Tudo certo!', 'A devolução foi registrada com sucesso.');
         return redirect()->route('dashboard.index');
