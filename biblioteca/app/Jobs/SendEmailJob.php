@@ -18,8 +18,6 @@ class SendEmailJob implements ShouldQueue
     protected $details;
     protected $class;
 
-    public $timeout = 600;
-
     /**
      * Create a new job instance.
      *
@@ -38,10 +36,6 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle()
     {
-        Log::warning(print_r('CAIU AQUI', true));
-        Log::warning(print_r($this->details, true));
-
         Mail::to($this->details)->send($this->class);
-        
     }
 }
